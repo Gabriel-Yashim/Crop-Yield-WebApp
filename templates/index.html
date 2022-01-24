@@ -149,53 +149,55 @@
             <form action="{{url_for('predict')}}" method="post">
                 <p>
                     <label for="">Nitrogen:</label>
-                    <input type="number" placeholder="Amount of Nitrogen">
+                    <input type="number" placeholder="Amount of Nitrogen" required='required'>
                 </p>
 
                 <p>
                     <label for="">Phosphorus:</label>
-                    <input type="number" placeholder="Amount of Phosphorus">
+                    <input type="number" placeholder="Amount of Phosphorus" required='required'>
                 </p>
 
                 <p>
                     <label for="">Potassium:</label>
-                    <input type="number" placeholder="Amount of Potassium">
+                    <input type="number" placeholder="Amount of Potassium" required='required'>
                 </p>
 
                 <p>
                     <label for="">Temperature:</label>
-                    <input type="number" placeholder="Amount of Temperature">
+                    <input type="number" placeholder="Amount of Temperature" required='required'>
                 </p>
 
                 <p>
                     <label for="">Humidity:</label>
-                    <input type="number" placeholder="Amount of Humidity">
+                    <input type="number" placeholder="Amount of Humidity" required='required'>
                 </p>
 
                 <p>
                     <label for="">Soil pH:</label>
-                    <input type="number" placeholder="Amount of Soil pH">
+                    <input type="number" placeholder="Amount of Soil pH" required='required'>
                 </p>
 
                 <p>
                     <label for="">Rainfall:</label>
-                    <input type="number" placeholder="Amount of Rainfall">
+                    <input type="number" placeholder="Amount of Rainfall" required='required'>
                 </p>
 
                 <input type="submit" value="Predict" id="btn">
             </form>
+
+            <br>
+            <br>
+            {{prediction_text}}
+
         </div>
-        {{prediction_text}}
+
         <hr>
     </section>
 
     <section class="foot">
         <div class="footer">
             <footer>
-                <p id="fot">
-                    Thank You.
-                </p>
-                <marquee behavior="" direction="">OLADIPE EBENEZER_PG/MAS/19/231_-_&copy;2022</marquee>
+                <marquee behavior="" direction="">OLADIPE EBENEZER_PG/MAS/19/231_-_&copy;2022....Thank You.</marquee>
             </footer>
         </div>
     </section>
