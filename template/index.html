@@ -146,46 +146,47 @@
         </p>
         <hr>
         <div class="params">
-            <p>
-                <label for="">Nitrogen:</label>
-                <input type="number" placeholder="Amount of Nitrogen">
-            </p>
+            <form action="{{url_for('predict')}}" method="post">
+                <p>
+                    <label for="">Nitrogen:</label>
+                    <input type="number" placeholder="Amount of Nitrogen">
+                </p>
 
-            <p>
-                <label for="">Phosphorus:</label>
-                <input type="number" placeholder="Amount of Phosphorus">
-            </p>
+                <p>
+                    <label for="">Phosphorus:</label>
+                    <input type="number" placeholder="Amount of Phosphorus">
+                </p>
 
-            <p>
-                <label for="">Potassium:</label>
-                <input type="number" placeholder="Amount of Potassium">
-            </p>
+                <p>
+                    <label for="">Potassium:</label>
+                    <input type="number" placeholder="Amount of Potassium">
+                </p>
 
-            <p>
-                <label for="">Temperature:</label>
-                <input type="number" placeholder="Amount of Temperature">
-            </p>
+                <p>
+                    <label for="">Temperature:</label>
+                    <input type="number" placeholder="Amount of Temperature">
+                </p>
 
-            <p>
-                <label for="">Humidity:</label>
-                <input type="number" placeholder="Amount of Humidity">
-            </p>
+                <p>
+                    <label for="">Humidity:</label>
+                    <input type="number" placeholder="Amount of Humidity">
+                </p>
 
-            <p>
-                <label for="">Soil pH:</label>
-                <input type="number" placeholder="Amount of Soil pH">
-            </p>
+                <p>
+                    <label for="">Soil pH:</label>
+                    <input type="number" placeholder="Amount of Soil pH">
+                </p>
 
-            <p>
-                <label for="">Rainfall:</label>
-                <input type="number" placeholder="Amount of Rainfall">
-            </p>
+                <p>
+                    <label for="">Rainfall:</label>
+                    <input type="number" placeholder="Amount of Rainfall">
+                </p>
 
-            <input type="button" value="Predict" id="btn">
+                <input type="button" value="Predict" id="btn">
+            </form>
         </div>
-        <hr>
-
         {{prediction_text}}
+        <hr>
     </section>
 
     <section class="foot">
