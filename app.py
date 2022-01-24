@@ -7,6 +7,7 @@ Created on Sun Jan 23 15:24:33 2022
 
 import numpy as np 
 from flask import Flask, request, jsonify, render_template
+import pickle
 
 app = Flask(__name__)
 model = pickle.load(open('GradientBoost.pkl', 'rb'))
