@@ -12,7 +12,7 @@
         }
 
         .head {
-            background-image: url('./image1.jpg');
+            background-image: url('../static/images/image1.jpg');
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
@@ -91,7 +91,7 @@
 
 
         .foot .footer {
-            background-image: url('./image.jpg');
+            background-image: url('../static/images/image.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             height: 400px;
@@ -149,37 +149,41 @@
             <form action="{{url_for('predict')}}" method="post">
                 <p>
                     <label for="">Nitrogen:</label>
-                    <input type="number" placeholder="Amount of Nitrogen" required='required'>
+                    <input type="number" placeholder="Amount of Nitrogen (a integer)" required='required'
+                        name="nitrogen">
                 </p>
 
                 <p>
                     <label for="">Phosphorus:</label>
-                    <input type="number" placeholder="Amount of Phosphorus" required='required'>
+                    <input type="number" placeholder="Amount of Phosphorus (a integer)" required='required'
+                        name="phosphorus">
                 </p>
 
                 <p>
                     <label for="">Potassium:</label>
-                    <input type="number" placeholder="Amount of Potassium" required='required'>
+                    <input type="number" placeholder="Amount of Potassium (a integer)" required='required'
+                        name="potassium">
                 </p>
 
                 <p>
                     <label for="">Temperature:</label>
-                    <input type="number" placeholder="Amount of Temperature" required='required'>
+                    <input type="number" placeholder="Amount of Temperature (a float)" required='required'
+                        name="temperature">
                 </p>
 
                 <p>
                     <label for="">Humidity:</label>
-                    <input type="number" placeholder="Amount of Humidity" required='required'>
+                    <input type="number" placeholder="Amount of Humidity (a float)" required='required' name="humidity">
                 </p>
 
                 <p>
                     <label for="">Soil pH:</label>
-                    <input type="number" placeholder="Amount of Soil pH" required='required'>
+                    <input type="number" placeholder="Amount of Soil pH (a float)" required='required' name="ph">
                 </p>
 
                 <p>
                     <label for="">Rainfall:</label>
-                    <input type="number" placeholder="Amount of Rainfall" required='required'>
+                    <input type="number" placeholder="Amount of Rainfall (a float)" required='required' name="rainfall">
                 </p>
 
                 <button type="submit" class="btn">Predict</button>
