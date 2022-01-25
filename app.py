@@ -5,7 +5,7 @@ Created on Sun Jan 23 15:24:33 2022
 @author: YASHIM GABRIEL
 """
 
-#import numpy as np 
+import numpy as np 
 from flask import Flask, request, render_template
 import pickle
 from logging import FileHandler,WARNING
@@ -21,13 +21,21 @@ file_handler.setLevel(WARNING)
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    int_features = [int(x) for x in request.form.values()]
-    final_features = [int_features]
-    prediction = model.predict(final_features)
     
-    output = prediction
+     N = int(request.form['nitrogen'])
+     P = int(request.form['phosphorous'])
+     K = int(request.form['pottasium'])
+     ph = float(request.form['ph'])
+     Temperature = float(request.form['temperature'])
+     Humidity = float(request.form['humidity'])
+     rainfall = float(request.form['rainfall'])
     
-    return render_template('index.html', prediction_text='The crop that will give the best yield is {}'.format(output))
+     final_features = np.array([[N,P,K,ph,Temperature,Humidity,rainfall]])
+     prediction = model.predict(final_features)
+    
+     output = prediction[0]
+    
+     return render_template('index.html', prediction_text=output)
 
 if __name__ == "__main__":
     app.run(debug=True)
