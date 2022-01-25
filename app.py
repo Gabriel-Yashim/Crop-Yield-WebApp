@@ -8,7 +8,6 @@ Created on Sun Jan 23 15:24:33 2022
 import numpy as np 
 from flask import Flask, request, render_template
 import pickle
-from logging import FileHandler,WARNING
 
 app = Flask(__name__)
 model = pickle.load(open('GradientBoost.pkl', 'rb'))
@@ -16,14 +15,12 @@ model = pickle.load(open('GradientBoost.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('index.html')
-file_handler = FileHandler('errorlog.txt')
-file_handler.setLevel(WARNING)
 
 @app.route('/predict',methods=['POST'])
 def predict():   
      N = int(request.form['nitrogen'])
-     P = int(request.form['phosphorous'])
-     K = int(request.form['pottasium'])
+     P = int(request.form['phosphorus'])
+     K = int(request.form['potassium'])
      Temperature = float(request.form['temperature'])
      Humidity = float(request.form['humidity'])
      ph = float(request.form['ph'])
