@@ -20,17 +20,16 @@ file_handler = FileHandler('errorlog.txt')
 file_handler.setLevel(WARNING)
 
 @app.route('/predict',methods=['POST'])
-def predict():
-    
+def predict():   
      N = int(request.form['nitrogen'])
      P = int(request.form['phosphorous'])
      K = int(request.form['pottasium'])
-     ph = float(request.form['ph'])
      Temperature = float(request.form['temperature'])
      Humidity = float(request.form['humidity'])
+     ph = float(request.form['ph'])
      rainfall = float(request.form['rainfall'])
     
-     final_features = np.array([[N,P,K,ph,Temperature,Humidity,rainfall]])
+     final_features = np.array([[N,P,K,Temperature,Humidity,ph,rainfall]])
      prediction = model.predict(final_features)
     
      output = prediction[0]
