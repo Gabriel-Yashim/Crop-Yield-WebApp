@@ -1,0 +1,1 @@
+streamlit run "C:\Users\SHOPINVERSE\Documents\GitHub\Crop-Yield-WebApp\streamlit_app.py"
