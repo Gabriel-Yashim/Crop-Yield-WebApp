@@ -71,7 +71,7 @@ result = ''
 if st.button('Submit'):
     pred = model.predict([[N,P,K,Temperature,Humidity,ph,rainfall]])
         
-    st.write(f"The crop that is suitable for the soil is: {pred[0]}")
+    st.write(f"The crop that is suitable for the soil is:  {pred[0]}")
     
 
 
