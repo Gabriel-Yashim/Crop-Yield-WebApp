@@ -10,7 +10,7 @@ import pickle
 import streamlit as st
 
 
-model = pickle.load(open('C:/Users/SHOPINVERSE/Documents/GitHub/Crop-Yield-WebApp/GradientBoost.pkl', 'rb'))
+model = pickle.load(open('GradientBoost.pkl', 'rb'))
 
 
 st.title('Crop Yield Prediction System')
