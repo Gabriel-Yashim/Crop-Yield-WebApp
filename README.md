@@ -27,3 +27,6 @@ This simple Crop Yield Prediction System. The system can recommend the kind of c
                     <li>Potato</li>
                     <li>Coffee</li>
                 </ul>
+
+## Crop-Yield-WebApp is deployed here:
+<a href="https://crop-yield-webapp.streamlit.app/">crop-yield-webapp.streamlit.app/</a>
